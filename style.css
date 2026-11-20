@@ -1,0 +1,531 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, sans-serif;
+  color: #020703;
+  line-height: 1.7;
+  background: #e7eae7;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: auto;
+}
+
+.header {
+  background: white;
+  border-bottom: 1px solid #000000;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.nav {
+  min-height: 76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #245b3c;
+  font-weight: bold;
+}
+
+.logo small {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.logo-icon {
+  background: #245b3c;
+  color: white;
+  border-radius: 50%;
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+nav a {
+  color: #35483a;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+nav a:hover { color: #a5753e; }
+
+.menu-btn {
+  display: none;
+  padding: 8px 12px;
+  border: 0;
+  background: #245b3c;
+  color: white;
+  font-size: 20px;
+  border-radius: 4px;
+}
+
+.admin-button {
+  border: 1px solid #245b3c;
+  background: white;
+  color: #245b3c;
+  padding: 9px 13px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hero {
+  min-height: 570px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: white;
+  background: #244b35 url("gambar/puncak-jaya.jpg") center/cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #10291ddd, #10291d40);
+}
+
+.hero-content {
+  position: relative;
+  padding: 90px 0;
+}
+
+.eyebrow {
+  color: #e9c894;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.green { color: #39724d; }
+
+.hero h1 {
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1.15;
+  margin: 17px 0;
+}
+
+.hero h1 span { color: #e9c894; }
+
+.hero-content p {
+  max-width: 620px;
+  margin-bottom: 25px;
+  color: #edf3ee;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 19px;
+  border: 0;
+  border-radius: 4px;
+  background: #245b3c;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 5px 5px 5px 0;
+}
+
+.btn:hover { background: #39764f; }
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid white;
+}
+
+.section { padding: 80px 0; }
+.light { background: #f3f7f3; }
+
+h2 {
+  color: #245238;
+  font-size: clamp(28px, 3.5vw, 40px);
+  line-height: 1.2;
+  margin: 10px 0 22px;
+}
+
+h3 {
+  color: #28563a;
+  margin: 10px 0;
+}
+
+p { margin-bottom: 13px; }
+
+.section-description {
+  max-width: 720px;
+  color: #68766b;
+  margin-bottom: 28px;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.feature-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.founder-card, .panel {
+  background: white;
+  padding: 28px;
+  border-radius: 8px;
+  border: 1px solid #e2eae2;
+  box-shadow: 0 5px 20px #173d2510;
+}
+
+.founder-card { text-align: center; }
+
+.founder-avatar {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #245b3c;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.panel ul { padding-left: 20px; }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.product-card, .news-card {
+  background: white;
+  border: 1px solid #e3eae3;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.product-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.product-card div { padding: 20px; }
+
+.tag {
+  display: inline-block;
+  color: #986b36;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.news-card { padding: 23px; }
+
+.news-card p, .product-card p {
+  font-size: 14px;
+  color: #68766b;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.note {
+  font-size: 12px;
+  color: #77847a;
+  margin-top: 15px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.video-grid video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #17251c;
+  border-radius: 5px;
+}
+
+.organization { text-align: center; padding-top: 20px; }
+
+.org-box {
+  display: inline-flex;
+  flex-direction: column;
+  min-width: 190px;
+  padding: 17px;
+  background: white;
+  border: 1px solid #dce7dd;
+  border-top: 4px solid #39724d;
+  border-radius: 6px;
+}
+
+.org-box small {
+  color: #977443;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.org-box strong { color: #245238; }
+.org-box p { font-size: 12px; margin: 3px 0 0; }
+
+.main-org {
+  background: #245b3c;
+  border-color: #245b3c;
+}
+
+.main-org strong, .main-org small { color: white; }
+
+.org-connector {
+  width: 1px;
+  height: 25px;
+  background: #9eb3a1;
+  margin: auto;
+}
+
+.org-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.map {
+  width: 100%;
+  height: 340px;
+  border: 0;
+  border-radius: 7px;
+}
+
+.contact-section {
+  padding: 75px 0;
+  background: #245b3c;
+  color: white;
+}
+
+.contact-section h2 { color: white; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.contact-card {
+  display: block;
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+  border: 1px solid #ffffff50;
+  border-radius: 6px;
+}
+
+.contact-card strong, .contact-card span { display: block; }
+.contact-card span { font-size: 13px; color: #dce9df; }
+
+.contact-form {
+  max-width: 650px;
+  display: grid;
+  gap: 12px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d5dfd6;
+  border-radius: 4px;
+  font: inherit;
+}
+
+textarea { min-height: 110px; resize: vertical; }
+
+footer {
+  padding: 25px 0;
+  background: #183c29;
+  color: white;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-content p { font-size: 12px; color: #c6d4c8; }
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: #07190fbf;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.modal.show { display: flex; }
+
+.modal-content {
+  background: white;
+  width: min(460px, 100%);
+  max-height: 90vh;
+  overflow: auto;
+  padding: 30px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.modal-content input, .modal-content textarea { margin: 10px 0; }
+
+.close-modal {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  border: 0;
+  background: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.btn-dark { background: #333; }
+
+@media (max-width: 900px) {
+  .menu-btn { display: block; }
+  nav {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    padding: 20px 4%;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav.open { display: flex; }
+  .two-column { grid-template-columns: 1fr; }
+  .card-grid, .video-grid { grid-template-columns: repeat(2, 1fr); }
+  .org-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 580px) {
+  .section { padding: 55px 0; }
+  .hero { min-height: 520px; }
+  .hero-content { padding: 60px 0; }
+  .card-grid, .video-grid { grid-template-columns: 1fr; }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .gallery img { height: 140px; }
+  .org-grid { grid-template-columns: 1fr; }
+  .org-box { width: 100%; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-content { flex-direction: column; }
+}
+
+
+/* KONTEN TAMBAHAN WEBSITE */
+.public-banner {
+  padding: 85px 0;
+  color: white;
+  text-align: center;
+  background:
+    linear-gradient(90deg, #173d29ed, #245b3cdd),
+    url("gambar/puncak-jaya.jpg") center/cover;
+}
+
+.public-banner h2 {
+  color: white;
+  font-size: clamp(30px, 5vw, 48px);
+  margin: 15px 0;
+}
+
+.public-banner p {
+  max-width: 700px;
+  margin: 0 auto 25px;
+  color: #e8f0e9;
+}
+
+.benefit-list {
+  padding-left: 22px;
+  margin: 18px 0 25px;
+}
+
+.benefit-list li {
+  margin: 10px 0;
+  color: #536359;
+}
+
+.faq-item {
+  background: white;
+  padding: 19px;
+  border: 1px solid #e1e9e1;
+  border-radius: 6px;
+  margin: 12px 0;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  color: #245238;
+  font-weight: bold;
+}
+
+.faq-item p {
+  padding-top: 12px;
+  color: #66736a;
+  margin-bottom: 0;
+}
+
+.panel small {
+  font-size: 11px;
+  color: #8a958d;
+}
+
+.panel:hover,
+.product-card:hover,
+.news-card:hover {
+  transform: translateY(-4px);
+  transition: .25s ease;
+  box-shadow: 0 10px 25px #173d2515;
+}
+
